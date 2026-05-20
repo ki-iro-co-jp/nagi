@@ -5,7 +5,7 @@ import CssBaseline from '@mui/material/CssBaseline';
 import theme from '@/theme/theme';
 
 export const metadata: Metadata = {
-  title: 'NPO法人 生活・就労支援サービス凪',
+  title: '特定非営利活動法人 生活・就労支援サービス凪',
   description: '暮らしの支援、未来を護る',
 };
 
