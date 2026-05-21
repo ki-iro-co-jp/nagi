@@ -83,6 +83,10 @@ export default function Hero() {
               variant="contained"
               size="large"
               disableElevation
+              component="a"
+              href="https://oyanakiato-familiar.com/contact"
+              target="_blank"
+              rel="noopener noreferrer"
               sx={{
                 px: 6,
                 py: 2,
@@ -90,20 +94,6 @@ export default function Hero() {
               }}
             >
               ご相談はこちら
-            </Button>
-
-            <Button
-              variant="outlined"
-              size="large"
-              sx={{
-                px: 6,
-                py: 2,
-                fontSize: '1.1rem',
-                backgroundColor: 'rgba(255, 255, 255, 0.5)',
-                backdropFilter: 'blur(4px)',
-              }}
-            >
-              活動内容を見る
             </Button>
           </Stack>
         </Stack>
