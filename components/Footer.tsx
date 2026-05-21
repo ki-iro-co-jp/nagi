@@ -15,7 +15,7 @@ export default function Footer() {
       component="footer"
       sx={{
         py: { xs: 8, md: 10 },
-        backgroundColor: '#2D3436',
+        backgroundColor: '#1f3f24',
         color: 'white',
       }}
     >
@@ -54,19 +54,19 @@ export default function Footer() {
               variant="body2"
               sx={{ color: (theme) => alpha(theme.palette.common.white, 0.7) }}
             >
-              北海道札幌市○○
+              北海道札幌市北区北25条西15丁目1-22
             </Typography>
             <Typography
               variant="body2"
               sx={{ color: (theme) => alpha(theme.palette.common.white, 0.7) }}
             >
-              TEL: 011-xxx-xxxx
+              TEL: 011-826-6065
             </Typography>
             <Typography
               variant="body2"
               sx={{ color: (theme) => alpha(theme.palette.common.white, 0.7) }}
             >
-              MAIL: info@example.com
+              MAIL: info@oyanakiato-familar.com
             </Typography>
           </Stack>
         </Stack>
@@ -83,7 +83,7 @@ export default function Footer() {
             variant="caption"
             sx={{ color: (theme) => alpha(theme.palette.common.white, 0.4) }}
           >
-            © {new Date().getFullYear()} NPO法人 生活・就労支援サービス凪. All rights reserved.
+            © {new Date().getFullYear()} 特定非営利活動法人 生活・就労支援サービス凪. All rights reserved.
           </Typography>
         </Box>
       </Container>

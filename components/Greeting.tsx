@@ -83,7 +83,7 @@ export default function Greeting() {
                   特定非営利活動法人 生活・就労支援サービス凪
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
-                  代表理事 〇〇 〇〇
+                  代表理事 渡邉 護
                 </Typography>
               </Box>
             </Stack>
