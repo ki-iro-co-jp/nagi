@@ -23,7 +23,7 @@ export default function Greeting() {
       <Container maxWidth="md">
         <Card
           sx={{
-            borderRadius: { xs: 4, md: 8 },
+            borderRadius: { xs: 1, md: 2 },
             boxShadow: '0 20px 60px rgba(0,0,0,0.1)',
             overflow: 'visible',
             position: 'relative',

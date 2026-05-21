@@ -64,7 +64,7 @@ export default function Hero() {
               variant="h6"
               color="text.secondary"
               sx={{
-                maxWidth: 600,
+                maxWidth: 640,
                 fontWeight: 400,
                 lineHeight: 1.6,
                 fontSize: { xs: '1rem', md: '1.25rem' },

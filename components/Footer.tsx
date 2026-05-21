@@ -66,7 +66,7 @@ export default function Footer() {
               variant="body2"
               sx={{ color: (theme) => alpha(theme.palette.common.white, 0.7) }}
             >
-              MAIL: info@oyanakiato-familar.com
+              MAIL: info@oyanakiato-familiar.com
             </Typography>
           </Stack>
         </Stack>

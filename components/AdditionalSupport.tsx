@@ -10,10 +10,10 @@ import {
 } from '@mui/material';
 
 const items = [
-  '成年後見',
-  '終活支援',
-  '身元保証',
-  '死後事務',
+  '成年後見制度・任意後見契約の支援',
+  '終活支援（遺言作成・遺言執行）',
+  '施設入所時の身元保証人・緊急連絡先の引き受け',
+  '死後事務のご支援',
 ];
 
 export default function AdditionalSupport() {
@@ -35,7 +35,7 @@ export default function AdditionalSupport() {
               fontSize: { xs: '1.5rem', md: '2rem' },
             }}
           >
-            幅広いニーズに対応
+            司法書士だからこそ、人生のもしもにも丁寧に寄り添います。
           </Typography>
 
           <Typography
