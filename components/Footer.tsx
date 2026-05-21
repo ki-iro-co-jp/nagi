@@ -3,38 +3,89 @@
 import {
   Box,
   Container,
-  Divider,
   Typography,
+  Stack,
+  alpha,
 } from '@mui/material';
 
 export default function Footer() {
   return (
-    <Box >
+    <Box
+      id="footer"
+      component="footer"
+      sx={{
+        py: { xs: 8, md: 10 },
+        backgroundColor: '#2D3436',
+        color: 'white',
+      }}
+    >
       <Container maxWidth="lg">
-        <Typography
-          variant="h6"
+        <Stack
+          direction={{ xs: 'column', md: 'row' }}
+          spacing={6}
+          sx={{ justifyContent: 'space-between' }}
+        >
+          <Box sx={{ maxWidth: 400 }}>
+            <Typography
+              variant="h6"
+              sx={{
+                fontWeight: 700,
+                mb: 2,
+                letterSpacing: 1,
+              }}
+            >
+              特定非営利活動法人
+              <br />
+              生活・就労支援サービス凪
+            </Typography>
+            <Typography
+              variant="body2"
+              sx={{ color: (theme) => alpha(theme.palette.common.white, 0.7) }}
+            >
+              「暮らしの支援、未来を護る」を理念に、地域に根ざした包括的なサポートを提供します。
+            </Typography>
+          </Box>
+
+          <Stack spacing={2}>
+            <Typography variant="subtitle1" sx={{ fontWeight: 700 }}>
+              お問い合わせ
+            </Typography>
+            <Typography
+              variant="body2"
+              sx={{ color: (theme) => alpha(theme.palette.common.white, 0.7) }}
+            >
+              北海道札幌市○○
+            </Typography>
+            <Typography
+              variant="body2"
+              sx={{ color: (theme) => alpha(theme.palette.common.white, 0.7) }}
+            >
+              TEL: 011-xxx-xxxx
+            </Typography>
+            <Typography
+              variant="body2"
+              sx={{ color: (theme) => alpha(theme.palette.common.white, 0.7) }}
+            >
+              MAIL: info@example.com
+            </Typography>
+          </Stack>
+        </Stack>
+
+        <Box
           sx={{
-            mb: 3,
+            mt: 8,
+            pt: 4,
+            borderTop: '1px solid rgba(255, 255, 255, 0.1)',
+            textAlign: 'center',
           }}
         >
-          NPO法人 生活・就労支援サービス凪
-        </Typography>
-
-        <Divider
-          sx={{
-            borderColor:
-              'rgba(255,255,255,.2)',
-            mb: 3,
-          }}
-        />
-
-        <Typography>
-          北海道札幌市○○
-        </Typography>
-
-        <Typography>
-          TEL / FAX / MAIL
-        </Typography>
+          <Typography
+            variant="caption"
+            sx={{ color: (theme) => alpha(theme.palette.common.white, 0.4) }}
+          >
+            © {new Date().getFullYear()} NPO法人 生活・就労支援サービス凪. All rights reserved.
+          </Typography>
+        </Box>
       </Container>
     </Box>
   );
