@@ -101,7 +101,10 @@ export default function Header() {
                 <Button
                   variant="contained"
                   color="primary"
-                  onClick={() => scrollToSection('footer')}
+                  component="a"
+                  href="https://oyanakiato-familiar.com/contact"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   sx={{ ml: 2, borderRadius: '20px' }}
                 >
                   ご相談はこちら
