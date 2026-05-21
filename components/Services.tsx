@@ -5,8 +5,10 @@ import {
   Card,
   CardContent,
   Container,
-  Grid,
   Typography,
+  Stack,
+  alpha,
+  Grid,
 } from '@mui/material';
 import GroupsIcon from '@mui/icons-material/Groups';
 import ComputerIcon from '@mui/icons-material/Computer';
@@ -38,49 +40,80 @@ const services = [
 
 export default function Services() {
   return (
-    <Box>
+    <Box
+      id="services"
+      component="section"
+      sx={{
+        py: { xs: 8, md: 12 },
+        backgroundColor: 'background.default',
+      }}
+    >
       <Container maxWidth="lg">
-        <Typography
-          variant="h4"
-          sx={{
-            mb: 6,
-            textAlign: 'center',
-          }}
-        >
-          活動内容
-        </Typography>
+        <Stack spacing={2} sx={{ mb: { xs: 6, md: 8 }, textAlign: 'center' }}>
+          <Typography
+            variant="h2"
+            sx={{
+              fontSize: { xs: '2rem', md: '2.5rem' },
+            }}
+          >
+            活動内容
+          </Typography>
+          <Typography
+            variant="body1"
+            color="text.secondary"
+            sx={{ maxWidth: 600, mx: 'auto' }}
+          >
+            一人ひとりの状況に合わせ、多角的なサポートを提供しています。
+          </Typography>
+        </Stack>
 
-        <Grid container spacing={4}>
+        <Grid container spacing={{ xs: 3, md: 4 }}>
           {services.map((service) => (
             <Grid
               key={service.title}
-              size={{ xs: 12, md: 6 }}
+              size={{ xs: 12, sm: 6 }}
             >
               <Card
                 sx={{
                   height: '100%',
-                  boxShadow:
-                    '0 10px 30px rgba(0,0,0,.06)',
+                  transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+                  '&:hover': {
+                    transform: 'translateY(-8px)',
+                    boxShadow: '0 12px 48px rgba(0,0,0,0.08)',
+                  },
                 }}
               >
-                <CardContent sx={{ p: 4 }}>
+                <CardContent sx={{ p: { xs: 4, md: 5 } }}>
                   <Box
                     sx={{
+                      width: 64,
+                      height: 64,
+                      borderRadius: 4,
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      backgroundColor: (theme) => alpha(theme.palette.primary.main, 0.1),
                       color: 'primary.main',
-                      mb: 2,
+                      mb: 3,
                     }}
                   >
                     {service.icon}
                   </Box>
 
                   <Typography
-                    variant="h6"
+                    variant="h5"
+                    component="h3"
                     gutterBottom
+                    sx={{ mb: 2 }}
                   >
                     {service.title}
                   </Typography>
 
-                  <Typography color="text.secondary">
+                  <Typography
+                    variant="body1"
+                    color="text.secondary"
+                    sx={{ lineHeight: 1.7 }}
+                  >
                     {service.text}
                   </Typography>
                 </CardContent>
