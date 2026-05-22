@@ -1,6 +1,5 @@
 'use client';
 
-import Image from 'next/image';
 import {
   Box,
   Button,
@@ -24,16 +23,6 @@ export default function Hero() {
     >
       <Container maxWidth="lg">
         <Stack spacing={{ xs: 4, md: 5 }}>
-          <Box sx={{ width: { xs: 100, md: 140 } }}>
-            <Image
-              src="/images/logo.png"
-              alt="凪 ロゴ"
-              width={140}
-              height={140}
-              style={{ width: '100%', height: 'auto' }}
-              priority
-            />
-          </Box>
           <Box>
             <Typography
               component="span"
