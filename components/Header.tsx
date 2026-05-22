@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import Image from 'next/image';
 import {
   AppBar,
   Toolbar,
@@ -45,9 +46,27 @@ export default function Header() {
 
   const drawer = (
     <Box sx={{ textAlign: 'center', p: 2 }}>
-      <Typography variant="h6" sx={{ my: 2, fontWeight: 'bold', color: 'primary.main' }}>
-        生活・就労支援サービス凪
-      </Typography>
+      <Box
+        sx={{
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          gap: 1,
+          my: 2,
+          cursor: 'pointer',
+        }}
+        onClick={() => scrollToSection('hero')}
+      >
+        <Image
+          src="/images/logo.png"
+          alt="凪 ロゴ"
+          width={48}
+          height={48}
+        />
+        <Typography variant="h6" sx={{ fontWeight: 'bold', color: 'primary.main' }}>
+          生活・就労支援サービス凪
+        </Typography>
+      </Box>
       <List>
         {navItems.map((item) => (
           <ListItem key={item.label} disablePadding>
@@ -69,14 +88,33 @@ export default function Header() {
       <AppBar position="sticky" color="default" elevation={1} sx={{ bgcolor: 'rgba(255, 255, 255, 0.9)', backdropFilter: 'blur(8px)' }}>
         <Container maxWidth="lg">
           <Toolbar disableGutters sx={{ justifyContent: 'space-between' }}>
-            <Typography
-              variant="h6"
-              component="div"
-              sx={{ fontWeight: 'bold', color: 'primary.main', cursor: 'pointer' }}
+            <Box
+              sx={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: 1.5,
+                cursor: 'pointer',
+              }}
               onClick={() => scrollToSection('hero')}
             >
-              生活・就労支援サービス凪
-            </Typography>
+              <Image
+                src="/images/logo.png"
+                alt="凪 ロゴ"
+                width={40}
+                height={40}
+              />
+              <Typography
+                variant="h6"
+                component="div"
+                sx={{
+                  fontWeight: 'bold',
+                  color: 'primary.main',
+                  display: { xs: 'none', sm: 'block' },
+                }}
+              >
+                生活・就労支援サービス凪
+              </Typography>
+            </Box>
 
             {isMobile ? (
               <IconButton
