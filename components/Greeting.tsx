@@ -31,7 +31,7 @@ export default function Greeting() {
           }}
         >
           <CardContent sx={{ p: { xs: 4, md: 8 } }}>
-            <Stack direction={{ xs: 'column', md: 'row' }} spacing={{ xs: 4, md: 6 }} alignItems="flex-start">
+            <Stack direction={{ xs: 'column', md: 'row' }} spacing={{ xs: 4, md: 6 }} sx={{ alignItems: "flex-start" }}>
               <Box sx={{ flexShrink: 0, width: { xs: '100%', md: 280 }, textAlign: 'center' }}>
                 <Box
                   sx={{
@@ -115,7 +115,7 @@ export default function Greeting() {
                   </Typography>
                 </Box>
                 <Box sx={{ pt: 2, textAlign: 'right', display: { xs: 'block', md: 'none' } }}>
-                   <Typography variant="subtitle2" sx={{ fontWeight: 700 }}>
+                  <Typography variant="subtitle2" sx={{ fontWeight: 700 }}>
                     特定非営利活動法人 生活・就労支援サービス凪
                   </Typography>
                 </Box>
